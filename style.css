@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*
+{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Open Sans", sans-serif;
+	line-height: 1.4;
+}
+
+a {
+	text-decoration: none;
+}
+
+#navbar {
+	background: #333;
+	color: #fff;
+	position: sticky; /*sticky kleebib positsiooni*/
+	top: 0;
+	padding: 1rem;
+	display: flex;
+	justify-content: space-between;
+}
+	
+#navbar ul {
+	list-style: none;
+    display: flex;
+    align-items: center;}
+
+	
+	
+	#navbar ul li a {
+		color: #fff;
+		padding: 0.75rem;
+		margin: 0 0.25rem;
+	}
+	
+	#navbar ul li a:hover {
+		background: #93cb52;
+		border-radius: 5px;
+	}
+	
+	.text-primary {
+		color: #93cb52;
+	}
+
+	.text-center {
+		text-align: center;
+	}
+	
+	#showcase {
+		background: #333 url('https://cdn.pixabay.com/photo/2023/12/15/14/49/city-8450817_1280.jpg');
+		height: 100vh;
+		color: #fff;
+	}
+
+	#showcase .showcase-content {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		padding: 0 2rem;
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+	
+	.l-heading {
+		font-size: 4rem;
+		margin-bottom: 0.75rem;
+		line-height: 1.1;
+	}
+
+	.par {
+		font-size: 1.1rem;
+		margin-bottom: 2rem;
+	}
+	.btn {
+		display: inline-block;
+		padding: 0.5rem 2rem;
+		border: none;
+		border-radius: 5px;
+	}
+	.btn-primary {
+		background: #93cb52;
+		color: #fff;
+	}
+	.btn-primary:hover {
+		background: #7ab436;
+	}
+	.text-primary {
+		color: #93cb52;
+	}
+	.bg-light {
+		background: #f4f4f4;
+		color: #333;
+	}
+	.m-heading {
+		font-size: 2rem;
+		margin-bottom: 0.75rem;
+		line-height: 1.1;
+	}
+	#what .items {
+		display: flex;
+	}
+	#what .items .item{
+		flex: 1;
+	}
+
+	#what .items .item i{
+		background: #93cb52;
+		border-radius: 50%;
+		margin-bottom: 1rem;
+	}
+	.py-1 {
+		padding: 1rem 0;
+	}
+	.p-1 {
+		padding: 1rem;
+	}
+	#who {
+		display: flex;
+	}
+	#who div {
+		flex: 1;
+	}
+	#who .who-img {
+		background: url('https://cdn.pixabay.com/photo/2020/12/18/19/27/team-5842784_1280.jpg') no-repeat center center/cover;
+	}
+	.bg-dark {
+		background: #333;
+		color: #fff;
+	}
+	#who ul {
+		list-style: none;
+		margin: 0.5rem 0;
+	}
+	#who ul li {
+		padding: 0.5rem 0;
+		border-bottom: #444 dotted 1px;
+	}
+	#clients .items {
+		display: flex;
+		justify-content: center;
+	}
+
+	#clients .items img {
+		display: block;
+		width: 60%;
+		margin: auto;
+	}
+	.bg-primary {
+		background: #93cb52;
+		color: #333;
+	}
+	#contact {
+		display: flex;
+	}
+	#contact .contact-form,
+	#contact .contact-map {
+		flex: 1;
+	}
+	#contact .contact-form .form-group {
+		margin: 0,75rem;
+	}
+	#contact .contact-form .form-group label {
+		display: block;
+	}
+
+	#contact .contact-form .form-group input,
+	#contact .contact-form .form-group textarea {
+	width: 100%;
+	padding: 0.5rem;
+	border: none;
+	}
+
+	#contact .contact-form .form-group input:focus,
+	#contact .contact-form .form-group textarea:focus {
+	outline: none;
+	border: #333 solid 1px;
+	}
+	.btn-dark {
+		background: #333;
+		color: #fff;
+	}
+	.btn-dark:hover {
+		background: #444;
+	}
+
+	/*Soovisin lisada üle kaardi tumeda varju. Siin on siis, kuidas ma seda tegin*/
+    .contact-map {
+    position: relative; 
+    overflow: hidden; /*määrab, kuidas liigset sisu käsitletakse*/
+}
+	.contact-map img {
+		width: 100%;
+		height: auto;
+		max-height: 400px; 
+		object-fit: cover; 
+		display: block;
+	  }
+
+	  /*Pseudoelement, et vari luua*/
+	  .contact-map::before {
+		content: ''; /*loob tühja sisu*/
+		position: absolute; /*asetab elemendi lähima vanemelemndi suhtes*/
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(0, 0, 0, 0.5); /*lisab varju*/
+		pointer-events: none; /*ei reageeri hiire sündmustele*/
+		z-index: 1; /*määrab, millises järjekorras elemendid kuvatakse, kui need kattuvad*/
+	}
+	
+
+	 

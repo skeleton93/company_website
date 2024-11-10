@@ -1,0 +1,168 @@
+/* Mobiilivaate kohandused */
+@media (max-width: 600px) {
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: "Open Sans", sans-serif;
+        line-height: 1.4;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    #navbar {
+        background: #333;
+        color: #fff;
+        position: sticky; /*sticky kleebib positsiooni*/
+        top: 0;
+        padding: 0.5rem; /* Vähendab paddingut mobiilis */
+        display: flex;
+        flex-direction: column; /* Muudab navigeerimise loendi veergudeks */
+        align-items: center; 
+    }
+
+    #navbar ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column; /* Muudab elemendid veergudeks */
+        align-items: center; 
+        border-bottom: #444 dotted 1px;
+    }
+
+    #navbar ul li a {
+        color: #fff;
+        padding: 0.5rem;
+        margin: 0.1rem 0; /* Muudab äärist */
+    }
+
+    #showcase {
+        background: #333 url('https://cdn.pixabay.com/photo/2023/12/15/14/49/city-8450817_1280.jpg');
+        height: 70vh; /* Muudab kõrgust mobiilis */
+        color: #fff;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .l-heading {
+        font-size: 2rem; /* Väiksem pealkirja suurus mobiilis */
+        margin-bottom: 0.5rem;
+        line-height: 1.1;
+    }
+
+    .par {
+        font-size: 0.9rem; /* Väiksem teksti suurus mobiilis */
+        margin-bottom: 1rem;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 0.5rem 1rem; /* Väiksem padding nuppudel */
+        border: none;
+        border-radius: 5px;
+        font-size: 0.8rem;
+        width: 80%;
+        margin: 0.5rem auto;
+    }
+
+    #what .items {
+        display: flex;
+        flex-direction: column; /* Muudab elemendid veergudeks */
+    }
+
+    #what .items .item {
+        margin-bottom: 0.5rem; /* Lisab vahe iga elemendi vahel */
+        text-align: center; /* Keskele joondamine */
+    }
+
+    #who {
+        flex-direction: column; /* Muudab paigutuse veergudeks */
+    }
+
+    #who .who-img {
+        height: 200px; /* Mobiilivaates väiksem pildi kõrgus */
+        background-size: cover; 
+    }
+
+    #clients .items {
+        flex-direction: column; 
+        align-items: center; /* Joondus keskele */
+    }
+
+    #clients .items img {
+        width: 80%; /* Suurendab piltide suurust mobiilis */
+        max-width: 200px; /* Piirab maksimaalset laiust */
+    }
+
+    #contact {
+        flex-direction: column; 
+    }
+
+    #contact .contact-form,
+    #contact .contact-map {
+        width: 100%; /* Muudan elementide laius 100% */
+    }
+
+    #contact .contact-form .form-group {
+        margin: 0.75rem 0; 
+    }
+
+    #contact .contact-form .form-group label {
+        display: block; /* Märgistus jääb blokk-elemendiks */
+        margin-bottom: 0.5rem; /* Lisab veidi vahet */
+    }
+
+    #contact .contact-form .form-group input,
+    #contact .contact-form .form-group textarea {
+        width: 100%; 
+        padding: 0.5rem; 
+        border: none; 
+    }
+
+    #contact .contact-form .form-group input:focus,
+    #contact .contact-form .form-group textarea:focus {
+        outline: none; /* Eemaldab äärise */
+        border: #333 solid 1px; 
+    }
+
+    .btn-dark {
+        background: #333; /* Tume nupp */
+        color: #fff; /* Teksti värv */
+    }
+
+    .btn-dark:hover {
+        background: #444; /* Hover efekt */
+    }
+
+    .contact-map {
+        position: relative; 
+        overflow: hidden; /* Määrab, kuidas liigset sisu käsitletakse */
+    }
+
+    .contact-map img {
+        width: 100%; 
+        height: auto; /* Hoia kuvasuhte */
+        max-height: 300px; /* Maksimaalne kõrgus mobiilis */
+        object-fit: cover; 
+        display: block; 
+    }
+
+    /* Pseudoelement, et luua vari */
+    .contact-map::before {
+        content: ''; /* Loob tühja sisu */
+        position: absolute; /* Asetab elemendi lähima vanemelemendi suhtes */
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5); /* Lisab varju */
+        pointer-events: none; /* Ei reageeri hiire sündmustele */
+        z-index: 1; /* Määrab, millises järjekorras elemendid kuvatakse, kui need kattuvad */
+    }
+}
